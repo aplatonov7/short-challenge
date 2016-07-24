@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.input {
+  border-radius: 3px;
+  background-color: $c-bg-light;
+  padding: 0.7rem 1.2rem;
+  border: none;
+
+  color: $c-text-primary;
+
+  :placeholder {
+    color: $c-text-unimportant;
+  }
+
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  transition: box-shadow 0.2s ease-out;
+}
+
+.error {
+  box-shadow: inset 0 0 2px 1px $c-error;
+}
+
+.errorDesc {
+  color: $c-error;
+  line-height: 2rem;
+  height: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+@media (min-width: $screen-sm) {
+  .input {
+    max-width: none;
+    margin: 0;
+  }
+}

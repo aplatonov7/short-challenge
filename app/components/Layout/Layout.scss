@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.root {
+  max-width: 620px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+@media (min-width: $screen-sm) {
+  .root {
+    padding-top: 6rem;
+  }
+}

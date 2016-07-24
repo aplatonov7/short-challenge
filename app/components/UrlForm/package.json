@@ -1,0 +1,6 @@
+{
+  "name": "UrlForm",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./UrlForm.js"
+}

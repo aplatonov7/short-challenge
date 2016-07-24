@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.root {
+  padding: 3rem 1.5rem;
+}
+
+.btn {
+  @include btn($c-accent, #fff);
+  margin: 0 auto;
+  display: block;
+  width: 10rem;
+  text-align: center;
+}
+
+.spinner {
+  display: inline-block;
+  width: 1rem;
+}
+
+@media (min-width: $screen-sm) {
+  .root {
+    display: flex;
+    align-items: flex-start;
+    padding: 3rem 0;
+  }
+
+  .urlRow {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .shortcode {
+    width: auto !important;
+  }
+}

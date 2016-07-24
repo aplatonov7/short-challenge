@@ -1,0 +1,23 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import '../../node_modules/normalize.css/normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  background: $c-bg-body;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: $c-text-primary;
+}

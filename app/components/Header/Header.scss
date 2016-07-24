@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.root {
+  text-align: center;
+}
+
+.logo {
+  position: relative;
+  font-family: $font-secondary;
+  font-size: 3rem;
+  color: $c-accent;
+
+  margin-bottom: 4px;
+  padding-right: 0.5rem;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: $c-accent;
+    height: 4px;
+    border-radius: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.motto {
+  font-weight: 300;
+  color: $c-text-secondary;
+  padding-bottom: calc(4px + 0.3rem);
+  margin-top: 1rem;
+}
+
+@media (min-width: $screen-sm) {
+  .root {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "UrlListTable",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./UrlListTable.js"
+}
