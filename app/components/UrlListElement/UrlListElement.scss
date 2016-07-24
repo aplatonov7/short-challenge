@@ -26,26 +26,6 @@
   100% {transform: translateX(0)}
 }
 
-.highlighted {
-  &:before {
-    content: "";
-    position: absolute;
-    top: -1rem;
-    bottom: -1rem;
-    left: -1rem;
-    width: 4px;
-    background-color: $c-accent;
-
-    opacity: 0;
-    animation: fadeIn 0.4s ease-in forwards;
-    animation-delay: 0.3s;
-  }
-}
-
-.hwrap {
-  position: relative;
-}
-
 .cell {
   padding: 1rem 0;
   vertical-align: middle;
@@ -91,7 +71,41 @@
   text-transform: uppercase;
 }
 
+.originRow {
+  display: block;
+  overflow: hidden;
+  width: 200px;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $c-text-unimportant;
+}
+
+.highlightedRow {
+  border: 2px solid $c-accent;
+}
+
 @media (min-width: $screen-sm) {
+  .highlighted {
+    &:before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      bottom: -1rem;
+      left: -1rem;
+      width: 4px;
+      background-color: $c-accent;
+
+      opacity: 0;
+      animation: fadeIn 0.4s ease-in forwards;
+      animation-delay: 0.3s;
+    }
+  }
+
+  .hwrap {
+    position: relative;
+  }
+
   .row {
     display: table-row;
     background: none;
@@ -120,12 +134,7 @@
   }
 
   .originRow {
-    display: block;
-    overflow: hidden;
     width: 400px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: $c-text-unimportant;
   }
 
   .mobileLabel {

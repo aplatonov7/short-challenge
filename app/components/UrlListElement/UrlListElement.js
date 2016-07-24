@@ -7,7 +7,7 @@ import { API_URL } from '../../config'
 import CopyToClipboard from 'react-copy-to-clipboard'
 
 const UrlListElement = ({ lastSeenDate, redirectCount, origin, shortcode, newlyAdded }) => (
-  <tr className={s.row}>
+  <tr className={classnames(s.row, { [s.highlightedRow]: newlyAdded })}>
     <td className={classnames(s.cell, s.urlCell)}>
       <div className={classnames(s.hwrap, { [s.highlighted]: newlyAdded })}>
         <div>
@@ -33,7 +33,7 @@ const UrlListElement = ({ lastSeenDate, redirectCount, origin, shortcode, newlyA
 
     <td className={classnames(s.cell, s.lastVisitedCell)}>
       <div className={s.mobileLabel}>Last visited</div>
-      {redirectCount === 0 ? 'never :(' : timeSince(lastSeenDate)}
+      {redirectCount === 0 ? 'never' : timeSince(lastSeenDate)}
     </td>
   </tr>
 )
